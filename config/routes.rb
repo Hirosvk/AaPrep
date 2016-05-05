@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :articles, :kajino
+  resources :articles, :hirohiros
   #HK: these names of the resources will become the names
   #of their controllers.
 end

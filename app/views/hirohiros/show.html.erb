@@ -1,0 +1,8 @@
+<h1><%= @hirohiro.title %></h1>
+<p><%= @hirohiro.body %></p>
+<%- # '@article' is an instance variable defined in the
+    # controller, and it is an instance of 'class Article'
+    -%>
+<%= link_to "delete", hirohiro_path(@hirohiro) %>
+
+<%= link_to "<<Back to Entry List", hirohiros_path %>

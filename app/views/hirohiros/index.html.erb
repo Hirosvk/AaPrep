@@ -1,0 +1,14 @@
+<h1> All Hiro's Articles </h1>
+
+<ul id="hirohiros">
+  <% @hirohiros.each do |hirohiro| %>
+    <li>
+      <%= link_to hirohiro.title, hirohiro_path(hirohiro),
+      class: 'hirohiro_title', id: "hirohiro_#{hirohiro.id}" %>
+
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Create a New Entry",
+new_hirohiro_path, class: "new_hirohiro" %>
