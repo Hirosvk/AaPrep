@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :articles, :hirohiros
+  resources :articles do
+    resources :comments
+  end
+
+  resources :hirohiros
   #HK: these names of the resources will become the names
   #of their controllers.
 end
