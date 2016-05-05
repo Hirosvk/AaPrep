@@ -1,0 +1,10 @@
+<h1> All Hiro's Entry </h1>
+
+<ul id="kajino">
+  <% @kajino.each do |entry| %>
+    <li>
+      <%= entry.display_body %>
+      <%= link_to entry.title, kajino_path(entry) %>
+    </li>
+  <% end %>
+</ul>

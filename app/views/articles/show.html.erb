@@ -1,0 +1,7 @@
+<h1><%= @article.title %></h1>
+<p><%= @article.body %></p>
+<%- # '@article' is an instance variable defined in the
+    # controller, and it is an instance of 'class Article'
+    -%>
+
+<%= link_to "<<Back to Article List", articles_path %>
