@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
   include ArticlesHelper
 
   def index
-    @article = Article.all
+    @articles = Article.all
   end
 
   def new

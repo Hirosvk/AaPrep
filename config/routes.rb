@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+
+  root to: 'articles#index'
   resources :articles do
     resources :comments
   end
 
-  resources :hirohiros
+  resources :hirohiros, :tags
   #HK: these names of the resources will become the names
   #of their controllers.
 end
