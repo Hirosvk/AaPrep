@@ -5,7 +5,13 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  resources :hirohiros, :tags
+  resources :hirohiros, :tags, :authors
+
+  resources :author_sessions, only: [:new, :create, :destroy]
+
+  get 'login'   => 'author_sessions#new'
+  get 'logout'  => 'author_sessions#destroy'
+  
   #HK: these names of the resources will become the names
   #of their controllers.
 end
